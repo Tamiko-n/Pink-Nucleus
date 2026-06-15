@@ -1,0 +1,123 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Early detection &middot; Pink Nucleus</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Inter:wght@400;450;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet"><style>
+:root{
+  --pink:#e76a93; --pink-deep:#cf4b78; --pink-mid:#f29ab6; --pink-pale:#f9c4d6;
+  --rose:#fdeef3; --rose2:#fbe1ea; --tint:#fff6f9; --white:#fff;
+  --ink:#4a373f; --soft:#9a8088; --line:#f4d7e1;
+  --benign:#2fa56e; --malign:#e0455f;
+  --shadow:0 10px 34px -20px rgba(207,75,120,.45);
+}
+*{box-sizing:border-box}
+body{margin:0;color:var(--ink);background:
+  radial-gradient(900px 460px at 100% -8%, var(--rose2) 0%, transparent 55%),
+  radial-gradient(820px 420px at 0% -6%, var(--rose) 0%, transparent 55%),
+  var(--tint);
+  font-family:"Inter",system-ui,sans-serif;line-height:1.6;font-weight:450;letter-spacing:.005em;min-height:100vh}
+a{color:inherit}
+h1,h2,h3,.brand .nm{font-family:"Poppins",sans-serif}
+.wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+/* nav */
+nav{position:sticky;top:0;z-index:20;backdrop-filter:blur(8px);background:rgba(255,255,255,.82);border-bottom:1px solid var(--line)}
+.nav-in{max-width:1080px;margin:0 auto;padding:13px 24px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none}
+.brand .rib{width:26px;height:30px}
+.brand .nm{font-weight:600;font-size:18px;color:var(--pink-deep)}
+.links{display:flex;gap:4px;flex-wrap:wrap}
+.links a{text-decoration:none;color:var(--soft);font-size:13.5px;font-weight:500;padding:8px 13px;border-radius:999px;transition:.15s}
+.links a:hover{color:var(--pink-deep);background:var(--rose)}
+.links a.active{color:#fff;background:var(--pink)}
+/* buttons */
+.btn{display:inline-flex;align-items:center;gap:9px;text-decoration:none;font-family:"Poppins";font-weight:600;font-size:14.5px;border-radius:999px;padding:13px 22px;cursor:pointer;border:0;transition:.18s}
+.btn-primary{background:var(--pink);color:#fff;box-shadow:var(--shadow)}
+.btn-primary:hover{background:var(--pink-deep);transform:translateY(-1px)}
+.btn-ghost{background:#fff;color:var(--pink-deep);border:1.5px solid var(--pink-pale)}
+.btn-ghost:hover{border-color:var(--pink);background:var(--rose)}
+.btn svg{width:16px;height:16px}
+/* generic */
+.eyebrow{font-family:"Poppins";font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--pink);font-weight:600}
+h2{font-weight:600;font-size:26px;margin:0 0 8px;color:var(--ink)}
+.lead{color:var(--soft);max-width:64ch;margin:0 0 24px}
+p{max-width:70ch}
+.card{background:#fff;border:1px solid var(--line);border-radius:16px;box-shadow:var(--shadow)}
+section{padding:46px 0;border-bottom:1px solid var(--line)}
+.muted{color:var(--soft)}
+.note{border:1px solid var(--line);border-left:3px solid var(--pink);border-radius:10px;padding:15px 17px;color:var(--soft);font-size:13.5px;background:#fff;max-width:74ch}
+.note b{color:var(--ink);font-weight:600}
+footer{padding:26px 0 64px;color:var(--soft);font-size:12px;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
+@media(prefers-reduced-motion:reduce){*{transition:none!important}}
+
+.phead{padding:52px 0 8px}
+.phead h1{font-size:clamp(30px,5vw,44px);font-weight:700;color:var(--pink-deep);margin:10px 0 8px;line-height:1.05}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:6px}
+.tile{background:#fff;border:1px solid var(--line);border-radius:14px;padding:20px;box-shadow:var(--shadow)}
+.tile .ic{width:34px;height:34px;border-radius:10px;background:var(--rose);display:grid;place-items:center;margin-bottom:12px}
+.tile .ic svg{width:19px;height:19px;stroke:var(--pink-deep)}
+.tile h3{font-size:15px;font-weight:600;margin:0 0 6px}
+.tile p{font-size:13.5px;color:var(--soft);margin:0}
+.signs{display:grid;grid-template-columns:1fr 1fr;gap:8px 26px;margin-top:8px}
+.sign{display:flex;gap:10px;align-items:baseline;padding:9px 0;border-bottom:1px solid var(--line)}
+.sign .dot{width:7px;height:7px;border-radius:50%;background:var(--pink);flex:none;transform:translateY(-2px)}
+.steps{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+.step{background:#fff;border:1px solid var(--line);border-radius:14px;padding:18px;box-shadow:var(--shadow)}
+.step .no{font-family:"Poppins";color:var(--pink);font-weight:700}
+.step h3{font-size:14.5px;margin:8px 0 6px;font-weight:600}
+.step p{font-size:13.5px;color:var(--soft);margin:0}
+@media(max-width:760px){.grid3{grid-template-columns:1fr}.signs{grid-template-columns:1fr}.steps{grid-template-columns:1fr}}
+</style></head><body><nav><div class="nav-in"><a class="brand" href="index.html"><svg class="rib" viewBox="0 0 100 120" fill="none" aria-hidden="true"><defs><linearGradient id="rg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f29ab6"/><stop offset="1" stop-color="#cf4b78"/></linearGradient></defs><g stroke="url(#rg)" stroke-width="11" stroke-linecap="round" fill="none"><path d="M50 16 C 28 44, 28 86, 56 110"/><path d="M50 16 C 72 44, 72 86, 44 110"/></g></svg><span class="nm">Pink Nucleus</span></a><div class="links"><a href="index.html">Home</a><a href="learn.html" class="active">Early detection</a><a href="diagnose.html">Diagnose</a><a href="results.html">The project</a></div></div></nav>
+<div class="wrap">
+  <div class="phead">
+    <div class="eyebrow">Awareness</div>
+    <h1>Catching it early changes everything</h1>
+    <p class="lead">Breast cancer is one of the most common cancers, but it is also one of the most treatable when found early. Knowing what to look for and getting screened on schedule are the simplest, most powerful steps anyone can take.</p>
+  </div>
+
+  <section style="border-top:1px solid var(--line)">
+    <h2>What breast cancer is</h2>
+    <p class="muted">Breast cancer begins when cells in the breast start to grow and divide in an uncontrolled way, forming a lump or mass. A benign mass is not cancer and does not spread; a malignant mass is cancerous and can grow into nearby tissue or spread elsewhere. Telling the two apart early is exactly what screening and tests like a fine&ndash;needle aspiration are designed to do, and it is the core of what this project models.</p>
+  </section>
+
+  <section>
+    <h2>Why early detection matters</h2>
+    <p class="muted">When breast cancer is found while it is still small and confined to the breast, treatment is far more likely to succeed and is often less aggressive. Survival rates are dramatically higher for localized disease than for cancer that has already spread. Early detection does not prevent cancer, but it buys the most important thing in cancer care: time and options.</p>
+  </section>
+
+  <section>
+    <h2>How it is found early</h2>
+    <div class="grid3">
+      <div class="tile"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.7"><path d="M12 21s-7-4.5-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 11c0 5.5-7 10-7 10z"/></svg></div>
+        <h3>Know your body</h3><p>Being familiar with how your breasts normally look and feel helps you notice changes early and raise them with a doctor.</p></div>
+      <div class="tile"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.7"><circle cx="11" cy="11" r="7"/><path d="m20 20-3-3"/></svg></div>
+        <h3>Screening mammogram</h3><p>An X-ray that can spot tumours before they can be felt. Current US guidance advises average-risk women to screen every two years from age 40 to 74.</p></div>
+      <div class="tile"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.7"><path d="M4 7h16M4 12h16M4 17h10"/></svg></div>
+        <h3>Clinical exam &amp; tests</h3><p>A clinician may add an exam, ultrasound, or a biopsy such as a fine-needle aspiration to examine the cells directly.</p></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Changes worth checking with a doctor</h2>
+    <div class="signs">
+      <div class="sign"><span class="dot"></span><span>A new lump or thickening in the breast or underarm</span></div>
+      <div class="sign"><span class="dot"></span><span>A change in the size or shape of the breast</span></div>
+      <div class="sign"><span class="dot"></span><span>Dimpling, puckering, or skin that looks like orange peel</span></div>
+      <div class="sign"><span class="dot"></span><span>Nipple turning inward, or unusual discharge</span></div>
+      <div class="sign"><span class="dot"></span><span>Redness, scaling, or flaking around the nipple</span></div>
+      <div class="sign"><span class="dot"></span><span>Persistent pain in one spot that does not go away</span></div>
+    </div>
+    <p class="muted" style="margin-top:16px;font-size:14px">Most changes turn out not to be cancer, but only a clinician can tell. Checking early is always the right call.</p>
+  </section>
+
+  <section>
+    <h2>From a sample to an answer</h2>
+    <p class="lead">When a mass needs a closer look, this is roughly how the cells become the measurements our model reads.</p>
+    <div class="steps">
+      <div class="step"><div class="no">01</div><h3>Fine-needle aspiration</h3><p>A thin needle collects a few cells from the mass onto a slide.</p></div>
+      <div class="step"><div class="no">02</div><h3>Imaging &amp; measurement</h3><p>The cell nuclei are photographed and measured for size, shape, and texture.</p></div>
+      <div class="step"><div class="no">03</div><h3>The 30 numbers</h3><p>Ten properties, each as an average, a variation, and a worst value, describe the sample.</p></div>
+      <div class="step"><div class="no">04</div><h3>Model reading</h3><p>The trained network turns those numbers into a benign-or-malignant probability.</p></div>
+    </div>
+  </section>
+
+  <section style="border-bottom:0">
+    <div class="note"><b>This page is for education, not diagnosis.</b> Screening guidance varies by age, history, and country, and personal risk differs from person to person. Always discuss screening and any symptoms with a qualified clinician.</div>
+  </section>
+</div>
+</body></html>

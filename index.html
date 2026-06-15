@@ -1,0 +1,78 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Pink Nucleus</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Inter:wght@400;450;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet"><style>
+:root{
+  --pink:#e76a93; --pink-deep:#cf4b78; --pink-mid:#f29ab6; --pink-pale:#f9c4d6;
+  --rose:#fdeef3; --rose2:#fbe1ea; --tint:#fff6f9; --white:#fff;
+  --ink:#4a373f; --soft:#9a8088; --line:#f4d7e1;
+  --benign:#2fa56e; --malign:#e0455f;
+  --shadow:0 10px 34px -20px rgba(207,75,120,.45); CT–354
+}
+*{box-sizing:border-box}
+body{margin:0;color:var(--ink);background:
+  radial-gradient(900px 460px at 100% -8%, var(--rose2) 0%, transparent 55%),
+  radial-gradient(820px 420px at 0% -6%, var(--rose) 0%, transparent 55%),
+  var(--tint);
+  font-family:"Inter",system-ui,sans-serif;line-height:1.6;font-weight:450;letter-spacing:.005em;min-height:100vh}
+a{color:inherit}
+h1,h2,h3,.brand .nm{font-family:"Poppins",sans-serif}
+.wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+/* nav */
+nav{position:sticky;top:0;z-index:20;backdrop-filter:blur(8px);background:rgba(255,255,255,.82);border-bottom:1px solid var(--line)}
+.nav-in{max-width:1080px;margin:0 auto;padding:13px 24px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none}
+.brand .rib{width:26px;height:30px}
+.brand .nm{font-weight:600;font-size:18px;color:var(--pink-deep)}
+.links{display:flex;gap:4px;flex-wrap:wrap}
+.links a{text-decoration:none;color:var(--soft);font-size:13.5px;font-weight:500;padding:8px 13px;border-radius:999px;transition:.15s}
+.links a:hover{color:var(--pink-deep);background:var(--rose)}
+.links a.active{color:#fff;background:var(--pink)}
+/* buttons */
+.btn{display:inline-flex;align-items:center;gap:9px;text-decoration:none;font-family:"Poppins";font-weight:600;font-size:14.5px;border-radius:999px;padding:13px 22px;cursor:pointer;border:0;transition:.18s}
+.btn-primary{background:var(--pink);color:#fff;box-shadow:var(--shadow)}
+.btn-primary:hover{background:var(--pink-deep);transform:translateY(-1px)}
+.btn-ghost{background:#fff;color:var(--pink-deep);border:1.5px solid var(--pink-pale)}
+.btn-ghost:hover{border-color:var(--pink);background:var(--rose)}
+.btn svg{width:16px;height:16px}
+/* generic */
+.eyebrow{font-family:"Poppins";font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--pink);font-weight:600}
+h2{font-weight:600;font-size:26px;margin:0 0 8px;color:var(--ink)}
+.lead{color:var(--soft);max-width:64ch;margin:0 0 24px}
+p{max-width:70ch}
+.card{background:#fff;border:1px solid var(--line);border-radius:16px;box-shadow:var(--shadow)}
+section{padding:46px 0;border-bottom:1px solid var(--line)}
+.muted{color:var(--soft)}
+.note{border:1px solid var(--line);border-left:3px solid var(--pink);border-radius:10px;padding:15px 17px;color:var(--soft);font-size:13.5px;background:#fff;max-width:74ch}
+.note b{color:var(--ink);font-weight:600}
+footer{padding:26px 0 64px;color:var(--soft);font-size:12px;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
+@media(prefers-reduced-motion:reduce){*{transition:none!important}}
+
+.hero{position:relative;overflow:hidden;text-align:center;padding:70px 0 64px;
+  background:radial-gradient(700px 360px at 50% -40%, var(--pink-pale) 0%, transparent 60%)}
+.hero .bigrib{width:96px;height:116px;margin:0 auto 18px;display:block}
+.hero h1{font-size:clamp(40px,7vw,68px);font-weight:700;line-height:1.02;margin:0 0 6px;color:var(--pink-deep);letter-spacing:-.01em}
+.hero .tag{font-family:"Poppins";font-weight:500;font-size:clamp(20px,3.4vw,30px);color:var(--ink);max-width:18ch;margin:14px auto 6px;line-height:1.2}
+.hero .tag em{font-style:normal;color:var(--pink)}
+.hero .sub{color:var(--soft);max-width:56ch;margin:18px auto 30px;font-size:16px}
+.hero .ctas{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.factband{display:flex;gap:0;justify-content:center;flex-wrap:wrap;margin-top:54px;border:1px solid var(--line);border-radius:16px;overflow:hidden;background:#fff;box-shadow:var(--shadow)}
+.fact{padding:22px 30px;text-align:center;flex:1;min-width:170px;border-right:1px solid var(--line)}
+.fact:last-child{border-right:0}
+.fact .v{font-family:"Poppins";font-weight:700;font-size:26px;color:var(--pink-deep)}
+.fact .k{color:var(--soft);font-size:12.5px;margin-top:4px}
+</style></head><body><nav><div class="nav-in"><a class="brand" href="index.html"><svg class="rib" viewBox="0 0 100 120" fill="none" aria-hidden="true"><defs><linearGradient id="rg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f29ab6"/><stop offset="1" stop-color="#cf4b78"/></linearGradient></defs><g stroke="url(#rg)" stroke-width="11" stroke-linecap="round" fill="none"><path d="M50 16 C 28 44, 28 86, 56 110"/><path d="M50 16 C 72 44, 72 86, 44 110"/></g></svg><span class="nm">Pink Nucleus</span></a><div class="links"><a href="index.html" class="active">Home</a><a href="learn.html">Early detection</a><a href="diagnose.html">Diagnose</a><a href="results.html">The project</a></div></div></nav>
+<div class="hero"><div class="wrap">
+  <svg class="bigrib" viewBox="0 0 100 120" fill="none" aria-hidden="true"><defs><linearGradient id="rg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f29ab6"/><stop offset="1" stop-color="#cf4b78"/></linearGradient></defs><g stroke="url(#rg)" stroke-width="11" stroke-linecap="round" fill="none"><path d="M50 16 C 28 44, 28 86, 56 110"/><path d="M50 16 C 72 44, 72 86, 44 110"/></g></svg>
+  <h1>Pink Nucleus</h1>
+  <p class="tag">Breast cancer is most treatable when it&rsquo;s <em>found early</em>.</p>
+  <p class="sub">A neural network, trained on 569 real biopsies, that reads the shape of breast cell nuclei and estimates whether a mass is benign or malignant. Built to show how machine learning can support early detection.</p>
+  <div class="ctas">
+    <a class="btn btn-primary" href="diagnose.html">Run a diagnosis
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+    <a class="btn btn-ghost" href="learn.html">Learn about early detection</a>
+  </div>
+  <div class="factband">
+    <div class="fact"><div class="v">1 in 8</div><div class="k">women face breast cancer in their lifetime</div></div>
+    <div class="fact"><div class="v">99.12%</div><div class="k">model accuracy on unseen biopsies</div></div>
+    <div class="fact"><div class="v">~99%</div><div class="k">5-year survival when caught early &amp; localized</div></div>
+  </div>
+</div></div>
+</body></html>
